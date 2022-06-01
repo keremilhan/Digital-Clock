@@ -1,8 +1,3 @@
-let userName = prompt('What is your name?');
-let nameDOM = document.getElementById('myName');
-
-nameDOM.innerHTML = `<h1>${userName}</h1>`;
-
 function currentTime() {
     let date = new Date(); 
     let hh = date.getHours();
@@ -28,5 +23,5 @@ function currentTime() {
     let t = setTimeout(function(){ currentTime() }, 1000);
 }
   
-currentTime();
+window.addEventListener("DOMContentLoaded", currentTime)
 
